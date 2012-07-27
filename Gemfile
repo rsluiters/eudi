@@ -21,14 +21,15 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'twitter-bootstrap-rails'
+
 
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
 end
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '~> 3.0.0' # To use ActiveModel has_secure_password
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'

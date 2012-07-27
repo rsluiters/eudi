@@ -1,0 +1,29 @@
+<h1>Listing users</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Rolle</th>
+    <th>Punkte</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @users.each do |user| %>
+  <tr>
+    <td><%= user.name %></td>
+    <td><%= user.email %></td>
+    <td><%= user.role_name %></td>
+    <td><%= user.points %></td>
+    <td><%= link_to ' Anzeigen', user, :class => "btn icon-eye-open icon-white" %></td>
+    <td><%= link_to ' Bearbeiten', edit_user_path(user), :class => "btn icon-pencil icon-white" %></td>
+    <td><%= link_to ' Löschen', user, method: :delete, data: { confirm: 'Bist du sicher?' }, :class => "btn btn-danger icon-white icon-trash" %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to ' Neuer Benutzer', new_user_path, :class => "btn icon-plus" %>
