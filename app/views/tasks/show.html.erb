@@ -7,7 +7,7 @@
 
 <p>
   <b>Description:</b>
-  <%= @task.description %>
+  <%= raw BlueCloth.new(@task.description).to_html %>
 </p>
 
 <p>

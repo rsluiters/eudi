@@ -5,7 +5,7 @@ gem 'rails', '3.2.6'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+
 
 
 # Gems used only for assets and not required
@@ -25,10 +25,15 @@ gem 'twitter-bootstrap-rails'
 
 
 group :development, :test do
+  gem 'sqlite3'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem 'simplecov'
 end
-
+group :production do
+    gem "pg"
+end
+gem 'bluecloth'
 gem 'bcrypt-ruby', '~> 3.0.0' # To use ActiveModel has_secure_password
 
 # To use Jbuilder templates for JSON
