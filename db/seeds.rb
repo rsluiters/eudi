@@ -5,8 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-if User.all.count == 0
+if User.count == 0
   u=User.new
+  u.first_name="Test"
+  u.last_name="Admin"
   u.email="admin@sluiters.de"
   u.password="test"
   u.role=User::ROLE_ADMIN
