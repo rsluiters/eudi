@@ -1,4 +1,6 @@
 class TasksController < ApplicationController
+
+  before_filter only_admin, :except => [:show]
   # GET /tasks
   # GET /tasks.json
   def index
