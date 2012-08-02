@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @task.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= raw BlueCloth.new(@task.description).to_html %>
+</p>
+
+
+<p>
+  <b>Points:</b>
+  <%= @task.points %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @task.category.name %>
+</p>
+

@@ -20,6 +20,13 @@ require 'spec_helper'
 
 describe UsersController do
 
+  before (:each) do
+    @user=User.new(:first_name => "Test", :last_name => "Test", :email => "test@test.com")
+    @user.password="test"
+    @user.role = User::ROLE_ADMIN
+    @user.save!
+  end
+
   # This should return the minimal set of attributes required to create a valid
   # User. As you add validations to User, be sure to
   # update the return value of this method accordingly.
@@ -36,7 +43,6 @@ describe UsersController do
 
   describe "GET index" do
     it "assigns all users as @users" do
-      user = User.create! valid_attributes
       get :index, {}, valid_session
       assigns(:users).should eq([user])
     end
@@ -44,9 +50,9 @@ describe UsersController do
 
   describe "GET show" do
     it "assigns the requested user as @user" do
-      user = User.create! valid_attributes
-      get :show, {:id => user.to_param}, valid_session
-      assigns(:user).should eq(user)
+
+      get :show, {:id => @user.to_param}, :user_id => @user.id
+      assigns(:user).should eq(@user)
     end
   end
 
@@ -59,9 +65,8 @@ describe UsersController do
 
   describe "GET edit" do
     it "assigns the requested user as @user" do
-      user = User.create! valid_attributes
-      get :edit, {:id => user.to_param}, valid_session
-      assigns(:user).should eq(user)
+      get :edit, {:id => @user.to_param}, valid_session
+      assigns(:user).should eq(@user)
     end
   end
 

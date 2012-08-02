@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   ROLE_ADMIN=1
   ROLE_TEACHER=2
   
-  attr_accessible :email, :first_name, :last_name, :points
+  attr_accessible :email, :first_name, :last_name, :points, :password
   
   validates_presence_of :first_name, :last_name, :email
   validates_uniqueness_of :email

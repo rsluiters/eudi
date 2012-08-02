@@ -1,3 +1,6 @@
+<div class ="lead"> 
+	Hier geht es darum, möglichst viele Punkte zu sammeln aus den verschiedenen Bereichen der Informatik.
+</div>
 <h1>Einloggen</h1>
 <%= form_for :user, :url => session_path, :method => :post do |f| %>
   <%= f.label :email %>
@@ -8,3 +11,4 @@
 <br/>
   <%= f.submit "Login" , :class => "btn btn-primary"%>
 <% end %>
+<%= render 'highscore' %>

@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user
 
+
 private
 
   def authenticate_user!
@@ -15,14 +16,15 @@ private
 
   def only_admin
     unless current_user and current_user.role == User::ROLE_ADMIN
-      redirect_to new_session_path
+      render '403.html' 
+#      render :status => :forbidden
     end  
   end
 
   def only_teacher
-    unless current_user and (current_user.role == User::ROLE_ADMIN
-                        or current_user.role == User::ROLE_TEACHER)
-      redirect_to new_session_path
+    unless current_user and (current_user.role == User::ROLE_ADMIN or current_user.role == User::ROLE_TEACHER)
+      render :file => "#{Rails.root}/public/403.html", :status => 403, :layout => false
+#      render :status => :forbidden
     end  
   end
 

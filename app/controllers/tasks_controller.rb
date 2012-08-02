@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
 
-  before_filter only_admin, :except => [:show]
+  before_filter :only_admin, :except => [:show]
   # GET /tasks
   # GET /tasks.json
   def index
@@ -23,6 +23,14 @@ class TasksController < ApplicationController
     end
   end
 
+  # GET /tasks/1/ask
+  def ask
+    @task = Task.find(params[:id])
+
+    respond_to do |format|
+      format.html # show.html.erb
+    end
+  end
   # GET /tasks/new
   # GET /tasks/new.json
   def new
