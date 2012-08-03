@@ -1,8 +1,10 @@
 Eudi::Application.routes.draw do
   resources :tasks
-  match 'tasks/:id/ask' => 'task#ask'
+  match 'tasks/:id/ask' => 'tasks#ask'
+  match 'tasks/:id/answer' => 'tasks#answer'
 
   resources :categories
+  match 'categories/:id/task' => 'categories#show_random_task'
 
   resources :users
   resource :session
@@ -51,7 +53,7 @@ Eudi::Application.routes.draw do
   #     resources :products
   #   end
 
-  root :to => 'users#index'
+  root :to => 'categories#index'
 
   # See how all your routes lay out with "rake routes"
 

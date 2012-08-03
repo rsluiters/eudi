@@ -1,25 +1,29 @@
-<h1>Listing categories</h1>
+<h1>Liste von Kategorien</h1>
 
 <table>
   <tr>
     <th>Name</th>
-    <th>Description</th>
-    <th></th>
-    <th></th>
+    <th>Beschreibung</th>
     <th></th>
   </tr>
 
 <% @categories.each do |category| %>
   <tr>
     <td><%= category.name %></td>
-    <td><%= category.description %></td>
-    <td><%= link_to 'Show', category %></td>
-    <td><%= link_to 'Edit', edit_category_path(category) %></td>
-    <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= raw BlueCloth.new(category.description).to_html %></td>
+    <td><%= link_to ' Fragen', "categories/#{category.id}/task", :class => "btn btn-success icon-circle-arrow-right icon-white"  %>
+	<% if current_user.role == User::ROLE_ADMIN %>
+    <%= link_to ' Anzeigen', category, :class => "btn icon-eye-open icon-white" %>
+    <%= link_to ' Bearbeiten', edit_category_path(category), :class => "btn icon-pencil icon-white" %>
+    <%= link_to ' Löschen', category, method: :delete, data: { confirm: 'Bist du sicher?' }, :class => "btn btn-danger icon-white icon-trash" %>
+	<% end %>
+	</td>
+
   </tr>
 <% end %>
 </table>
 
 <br />
-
-<%= link_to 'New Category', new_category_path %>
+<% if current_user.role == User::ROLE_ADMIN %>
+<%= link_to 'Neue Kategorie', new_category_path, :class => "btn icon-plus" %>
+<% end %>

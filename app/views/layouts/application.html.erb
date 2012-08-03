@@ -18,7 +18,8 @@
 	<%= link_to 'Benutzer', users_path %> |
 	<div class ="pull-right">
 	<% if current_user %>
-	  <%= link_to current_user.name,user_path(current_user) %>
+	  <%= link_to ' ' + current_user.name,user_path(current_user), class: 'icon-user' %>
+      <span class="badge badge-success"><%= current_user.points %></span>
 	<%= link_to " Abmelden" , session_path, :method => :delete, :class => "btn icon-eject"%>
 	<% end %>
 	</div>

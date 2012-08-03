@@ -1,11 +1,10 @@
 <h2>Punkte:</h2>
 <table class="table table-striped">
-<% counter = 0%>
-<% User.find_by_sql("SELECT * FROM users ORDER BY points DESC").each do |user| %>
-<% if (counter <10)%>
+
+<% User.order("points desc").limit(10).each do |user| %>
 	<tr><td><%= user.name%>
 		</td>
 		<td><span class="badge badge-success"><%= user.points %></span></td>
 </tr>
-<%counter +=1;end;end%>
+<%end%>
 </table>

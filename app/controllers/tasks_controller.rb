@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
 
-  before_filter :only_admin, :except => [:show]
+  before_filter :only_admin, :except => [:show, :ask, :answer]
   # GET /tasks
   # GET /tasks.json
   def index
@@ -26,11 +26,27 @@ class TasksController < ApplicationController
   # GET /tasks/1/ask
   def ask
     @task = Task.find(params[:id])
+    respond_to do |format|
+      format.html # show.html.erb
+    end
+  end
+
+  # GET /tasks/1/answer
+  def answer
+    @task = Task.find(params[:id])
+#    render :text => "#{@task.answer}, #{params.inspect}" and return
+    if (@task.answer.to_s == params[:post][:answered])
+      current_user.points += @task.points
+      current_user.save!
+    else
+    end
 
     respond_to do |format|
       format.html # show.html.erb
     end
   end
+  
+  
   # GET /tasks/new
   # GET /tasks/new.json
   def new

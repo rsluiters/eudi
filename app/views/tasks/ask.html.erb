@@ -1,23 +1,26 @@
 <p id="notice"><%= notice %></p>
 
+  <h2><%= @task.category.name %>: <%= @task.name %></h2>
+
 <p>
-  <b>Name:</b>
-  <%= @task.name %>
+  <b>Erreichbare Punkte:</b> <%= @task.points %>
 </p>
 
 <p>
-  <b>Description:</b>
   <%= raw BlueCloth.new(@task.description).to_html %>
 </p>
 
 
-<p>
-  <b>Points:</b>
-  <%= @task.points %>
-</p>
+<%= form_for(@task, :as => :post, :url => task_path(@task) + '/answer') do |f| %>
 
-<p>
-  <b>Category:</b>
-  <%= @task.category.name %>
-</p>
-
+  <div class="field">
+	 Antwort 1: <%= f.radio_button("answered", "1") %><br/>
+	 Antwort 2: <%= f.radio_button("answered", "2") %><br/>
+	 Antwort 3: <%= f.radio_button("answered", "3") %><br/>
+	 Antwort 4: <%= f.radio_button("answered", "4") %><br/>
+	 Antwort 5: <%= f.radio_button("answered", "5") %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Antwort absenden",:class=>"btn btn-primary btn-large"  %>
+  </div>
+<% end %>

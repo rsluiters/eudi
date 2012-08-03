@@ -21,6 +21,19 @@ class CategoriesController < ApplicationController
     end
   end
 
+  # GET /categories/1/task
+  def show_random_task
+    @category = Category.find(params[:id])
+    tasks = Task.where("category_id = ?", @category.id).all 
+    if tasks.length == 0
+      redirect_to @category, notice: 'Keine Fragen in dieser Kategorie.'
+    else
+      task = tasks[rand tasks.length]
+      redirect_to "/tasks/#{task.id}/ask"
+    end
+  end
+
+
   # GET /categories/new
   # GET /categories/new.json
   def new
