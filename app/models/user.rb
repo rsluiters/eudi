@@ -16,6 +16,16 @@ class User < ActiveRecord::Base
     "#{self.first_name} #{self.last_name}"
   end
 
+  def is_admin
+    return self.role == ROLE_ADMIN
+  end
+
+  def is_teacher
+    return ((self.role == ROLE_TEACHER) or (is_admin))
+    
+  end
+
+
   def role_name
     return {ROLE_USER=>"Schüler",ROLE_TEACHER=>"Lehrer",ROLE_ADMIN=>"Admin"}[self.role]
   end

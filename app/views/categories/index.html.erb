@@ -12,7 +12,7 @@
     <td><%= category.name %></td>
     <td><%= raw BlueCloth.new(category.description).to_html %></td>
     <td><%= link_to ' Fragen', "categories/#{category.id}/task", :class => "btn btn-success icon-circle-arrow-right icon-white"  %>
-	<% if current_user.role == User::ROLE_ADMIN %>
+	<% if current_user.is_admin %>
     <%= link_to ' Anzeigen', category, :class => "btn icon-eye-open icon-white" %>
     <%= link_to ' Bearbeiten', edit_category_path(category), :class => "btn icon-pencil icon-white" %>
     <%= link_to ' Löschen', category, method: :delete, data: { confirm: 'Bist du sicher?' }, :class => "btn btn-danger icon-white icon-trash" %>
@@ -24,6 +24,6 @@
 </table>
 
 <br />
-<% if current_user.role == User::ROLE_ADMIN %>
+<% if current_user.is_admin %>
 <%= link_to 'Neue Kategorie', new_category_path, :class => "btn icon-plus" %>
 <% end %>

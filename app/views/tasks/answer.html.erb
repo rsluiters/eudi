@@ -1,2 +1,6 @@
-<h1>Liste von Aufgaben</h1>
+<p id="notice"><%= notice %></p>
 
+
+<%= link_to 'Zurück zu Kategorien', categories_path, :class => "btn" %>
+
+<%= link_to ' Nächste Frage', "/categories/#{@task.category_id}/task", :class => "btn btn-success icon-circle-arrow-right icon-white"  %>

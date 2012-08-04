@@ -14,8 +14,13 @@
 	    Emmi und die Informatiker
 	    </a>
 	<%= link_to 'Kategorien', categories_path %> |
+
+	<% if current_user and current_user.is_admin %>
 	<%= link_to 'Aufgaben', tasks_path %> |
+    <% end %>
+	<% if current_user and (current_user.is_teacher) %>
 	<%= link_to 'Benutzer', users_path %> |
+    <% end %>
 	<div class ="pull-right">
 	<% if current_user %>
 	  <%= link_to ' ' + current_user.name,user_path(current_user), class: 'icon-user' %>
