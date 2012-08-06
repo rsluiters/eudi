@@ -1,31 +1,43 @@
 <h1>Liste von Aufgaben</h1>
 
-<table>
+<table class="table table-striped">
   <tr>
     <th>Name</th>
     <th>Beschreibung</th>
+    <th>Antwortvorgaben</th>
     <th>Antwort</th>
     <th>Punkte</th>
     <th>Kategorie</th>
-    <th></th>
-    <th></th>
     <th></th>
   </tr>
 
 <% @tasks.each do |task| %>
   <tr>
     <td><%= task.name %></td>
-    <td><%= task.description %></td>
+    <td><%= raw BlueCloth.new(task.description).to_html %></td>
+    <td>
+      <ol>
+      <li><%= task.option1 %></li>
+      <li><%= task.option2 %></li>
+      <li><%= task.option3 %></li>
+      <li><%= task.option4 %></li>
+      <li><%= task.option5 %></li>
+      </ol>
+	</td>
     <td><%= task.answer %></td>
     <td><%= task.points %></td>
     <td><%= task.category.name %></td>
-    <td><%= link_to 'Show', task %></td>
-    <td><%= link_to 'Edit', edit_task_path(task) %></td>
-    <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to '', task, :class => "btn icon-eye-open icon-white"  %><br/><br/>
+	<% if current_user.is_admin %>
+    <%= link_to '', edit_task_path(task), :class => "btn icon-pencil icon-white" %><br/><br/>
+    <%= link_to '', task, method: :delete, data: { confirm: 'Bist du sicher?' }, :class => "btn btn-danger icon-white icon-trash" %>
+	<% end %>
+	</td>
   </tr>
 <% end %>
 </table>
 
 <br />
-
-<%= link_to 'New Task', new_task_path %>
+<% if current_user.is_admin %>
+<%= link_to 'Neue Aufgabe', new_task_path, :class => "btn icon-plus"  %>
+<% end %>

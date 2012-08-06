@@ -1,6 +1,6 @@
 <h1>Listing users</h1>
 
-<table>
+<table class="table table-striped">
   <tr>
 	<th></th>
     <th>Name</th>
@@ -19,13 +19,13 @@
     <td><%= user.email %></td>
     <td><span class="label label-info"><%= user.role_name %></span></td>
     <td><span class="badge badge-success"><%= user.points %></span></td>
-    <td><%= link_to ' Anzeigen', user, :class => "btn icon-eye-open icon-white" %></td>
-    <td><%= link_to ' Bearbeiten', edit_user_path(user), :class => "btn icon-pencil icon-white" %></td>
-    <td><%= link_to ' Löschen', user, method: :delete, data: { confirm: 'Bist du sicher?' }, :class => "btn btn-danger icon-white icon-trash" %></td>
+    <td><%= link_to 'Anzeigen', user, :class => "btn icon-eye-open icon-white" %></td>
+    <td><%= link_to 'Bearbeiten', edit_user_path(user), :class => "btn icon-pencil icon-white" %></td>
+    <td><%= link_to 'Löschen', user, method: :delete, data: { confirm: 'Bist du sicher?' }, :class => "btn btn-danger icon-white icon-trash" %></td>
   </tr>
 <% end if @users %>
 </table>
 
 <br />
 
-<%= link_to ' Neuer Benutzer', new_user_path, :class => "btn icon-plus" %>
+<%= link_to 'Neuer Benutzer', new_user_path, :class => "btn icon-plus" %>

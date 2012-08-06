@@ -1,5 +1,18 @@
 <p id="notice"><%= notice %></p>
 
+<% if params[:post][:answered] == @task.answer.to_s%>
+<h2>Die Antwort "<%= params[:post][:answered] %>" ist <b>R I C H T I G !</b></h2>
+<%= @task.correct_answer %><br/>
+
+<% else %>
+<h2>Die Antwort "<%= params[:post][:answered] %>" ist leider <b>falsch</b></h2>
+Die richtige Antwort lautet: <%= @task.correct_answer %><br/>
+<% end %>
+<br/><br/>
+<p><b>Erklärung:</b><br/>
+  <%= raw BlueCloth.new(@task.solution).to_html %>
+</p>
+<br/><br/>
 
 <%= link_to 'Zurück zu Kategorien', categories_path, :class => "btn" %>
 

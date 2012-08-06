@@ -14,11 +14,11 @@
 <%= form_for(@task, :as => :post, :url => task_path(@task) + '/answer') do |f| %>
 
   <div class="field">
-	 Antwort 1: <%= f.radio_button("answered", "1") %><br/>
-	 Antwort 2: <%= f.radio_button("answered", "2") %><br/>
-	 Antwort 3: <%= f.radio_button("answered", "3") %><br/>
-	 Antwort 4: <%= f.radio_button("answered", "4") %><br/>
-	 Antwort 5: <%= f.radio_button("answered", "5") %>
+	 <% if @task.option1 !="" %> <%= f.radio_button("answered", "1") %> 1: <%= f.label :answered_1, @task.option1 %><br/><% end %>
+	 <% if @task.option2 !="" %> <%= f.radio_button("answered", "2") %> 2: <%= f.label :answered_2, @task.option2 %><br/><% end %>
+	 <% if @task.option3 !="" %> <%= f.radio_button("answered", "3") %> 3: <%= f.label :answered_3, @task.option3 %><br/><% end %>
+	 <% if @task.option4 !="" %> <%= f.radio_button("answered", "4") %> 4: <%= f.label :answered_4, @task.option4 %><br/><% end %>
+	 <% if @task.option5 !="" %> <%= f.radio_button("answered", "5") %> 5: <%= f.label :answered_5, @task.option5 %><br/><% end %>
   </div>
   <div class="actions">
     <%= f.submit "Antwort absenden",:class=>"btn btn-success icon-circle-arrow-right icon-white btn-large"  %>

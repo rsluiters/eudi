@@ -1,21 +1,20 @@
 <h1>Liste von Kategorien</h1>
 
-<table>
+<table class="table table-striped">
   <tr>
-    <th>Name</th>
     <th>Beschreibung</th>
     <th></th>
   </tr>
 
 <% @categories.each do |category| %>
   <tr>
-    <td><%= category.name %></td>
-    <td><%= raw BlueCloth.new(category.description).to_html %></td>
-    <td><%= link_to ' Fragen', "categories/#{category.id}/task", :class => "btn btn-success icon-circle-arrow-right icon-white"  %>
+    <td><h3><%= category.name %></h3>
+    <%= raw BlueCloth.new(category.description).to_html %></td>
+    <td><%= link_to 'Fragen', "categories/#{category.id}/task", :class => "btn btn-success icon-circle-arrow-right icon-white"  %>
 	<% if current_user.is_admin %>
-    <%= link_to ' Anzeigen', category, :class => "btn icon-eye-open icon-white" %>
-    <%= link_to ' Bearbeiten', edit_category_path(category), :class => "btn icon-pencil icon-white" %>
-    <%= link_to ' Löschen', category, method: :delete, data: { confirm: 'Bist du sicher?' }, :class => "btn btn-danger icon-white icon-trash" %>
+    <%= link_to 'Anzeigen', category, :class => "btn icon-eye-open icon-white" %>
+    <%= link_to 'Bearbeiten', edit_category_path(category), :class => "btn icon-pencil icon-white" %>
+    <%= link_to 'Löschen', category, method: :delete, data: { confirm: 'Bist du sicher?' }, :class => "btn btn-danger icon-white icon-trash" %>
 	<% end %>
 	</td>
 
