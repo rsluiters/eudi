@@ -18,7 +18,7 @@ end
 
 gem 'jquery-rails'
 gem 'twitter-bootstrap-rails'
-
+gem 'yaml_db'
 
 group :development, :test do
   gem 'sqlite3'

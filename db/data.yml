@@ -1,0 +1,178 @@
+
+---
+users:
+  columns:
+  - id
+  - first_name
+  - last_name
+  - email
+  - password_digest
+  - points
+  - created_at
+  - updated_at
+  - role
+  records: 
+  - - 1
+    - Ralph
+    - Sluiters
+    - ralph@sluiters.de
+    - $2a$10$OnifFNO1/AnEGJ8KmMUFB.sq2UYESX7V90HOAXjFIBdZLa4Sl7rSy
+    - 320
+    - '2012-07-27 19:21:20.954541'
+    - '2012-08-05 19:10:23.835888'
+    - 1
+  - - 2
+    - Jule
+    - Sluiters
+    - jule@sluiters.de
+    - $2a$10$CsJCm2vAB9p0MtNSUynvy.WWJeYSjTenZKGg8oKD6YxyfO7fauyzO
+    - 441
+    - '2012-07-27 19:26:04.372136'
+    - '2012-08-04 07:43:25.553347'
+    - 0
+  - - 3
+    - Melanie
+    - Wagner
+    - melanie@sluiters.de
+    - $2a$10$PoetCoWG4hKLWFNh9O3z9eV1kxjKVnK4mfXcGqyLvI3FNU2QMwT9O
+    - 0
+    - '2012-07-27 19:49:45.671022'
+    - '2012-07-27 19:49:45.671022'
+    - 2
+  - - 5
+    - Hannah
+    - Sluiters
+    - hannah@sluiters.de
+    - $2a$10$y809BqVcPOst3lOJlJc6.emE8C85J2/5Kojy1mqA.exOsvufBEJYi
+    - 62
+    - '2012-08-02 12:09:53.688899'
+    - '2012-08-04 07:45:13.974257'
+    - 0
+  - - 6
+    - Emil
+    - Sluiters
+    - emil@sluiters.de
+    - $2a$10$68GABTAnmxis1TdLjCdQ7.7KD.vtyiPG5x1IHroeqtoX.XJPsgoM.
+    - 0
+    - '2012-08-03 07:50:20.044289'
+    - '2012-08-03 07:50:20.044289'
+    - 0
+
+---
+categories:
+  columns:
+  - id
+  - name
+  - description
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Logik
+    - Hier kommen Logikfragen hin!
+    - '2012-07-28 08:31:01.524169'
+    - '2012-07-28 08:31:01.524169'
+  - - 2
+    - Schaltung
+    - Hier geht es um das Thema *Schaltungen* und **Gatter**.
+    - '2012-08-02 12:11:46.901423'
+    - '2012-08-03 07:55:14.889028'
+  - - 3
+    - Programmiersprachen
+    - Hier geht es um Programmiersprachen, Algorithmen und Datenstrukturen.
+    - '2012-08-02 12:12:29.304778'
+    - '2012-08-02 12:12:29.304778'
+  - - 4
+    - Datum und Zeit
+    - Rechnen mit Uhrzeiten und Daten
+    - '2012-08-02 12:13:19.023579'
+    - '2012-08-02 12:13:19.023579'
+  - - 5
+    - Strings
+    - Textbehandlung
+    - '2012-08-02 12:13:52.621382'
+    - '2012-08-02 12:13:52.621382'
+
+---
+tasks:
+  columns:
+  - id
+  - name
+  - description
+  - answer
+  - points
+  - category_id
+  - created_at
+  - updated_at
+  - option1
+  - option2
+  - option3
+  - option4
+  - option5
+  - solution
+  records: 
+  - - 1
+    - Wochentage
+    - ! "Wenn **vorgestern** Samstag war, welcher Tag ist dann **übermorgen**?\r\n"
+    - '2'
+    - 10
+    - 4
+    - '2012-07-28 08:33:05.016315'
+    - '2012-08-05 10:43:38.960087'
+    - Montag
+    - Mittwoch
+    - Donnerstag
+    - Freitag
+    - Samstag
+    - ! "Die Lösung ist durch abzählen zu ermitteln:\r\n\r\n* Vorgestern: Samstag\r\n*
+      Gestern: Sonntag\r\n* Heute: Montag\r\n* Morgen: Dienstag\r\n* Übermogen: **Mittwoch**\r\n"
+  - - 2
+    - Schafe
+    - ! "Alle Schafe auf der Wiese sind weiss.\r\nEmmi zählt fünf weisse Tiere und
+      ein schwarzes Tier.\r\n\r\nWelche Aussage ist richtig?\r\n"
+    - '3'
+    - 20
+    - 1
+    - '2012-08-02 12:18:05.138395'
+    - '2012-08-05 10:25:32.262976'
+    - ! ' Es sind in jedem Fall fünf Schafe'
+    - Es sind 6 Schafe
+    - Es sind höchstens 5 Schafe
+    - ! ' Es ist garantiert genau ein Schaf'
+    - Es kann kein Schaf dabei sein
+    - Es können nicht 6 Schafe sein, weil alle Schafe weiss sind und ein schwarzes
+      Tier dabei ist, es müssen aber auch nicht genau 5 Schafe sein, da nicht gesagt
+      wird, dass alle weissen Tiere auch Schafe sind, es könnte also auch ein weisser
+      Hund dazwischen sitzen.
+  - - 3
+    - sdfsdf
+    - sdfsdfs
+    - '1'
+    - 1
+    - 1
+    - '2012-08-03 19:32:20.184566'
+    - '2012-08-05 18:55:29.353285'
+    - correct
+    - wrong
+    - ''
+    - ''
+    - ''
+    - ''
+  - - 4
+    - Gatter I
+    - ! "Folgende Schaltung ist gegeben:\r\n         ___      ____\r\n    A --| &
+      |____| ≥1 |\r\n    B --|___|    |    |---------- D\r\n                 |    |\r\n
+      \   C------------|____|\r\n\r\n\r\n* C hat Strom\r\n* A und B haben keinen Strom\r\n"
+    - '1'
+    - 20
+    - 2
+    - '2012-08-04 19:52:13.579448'
+    - '2012-08-05 19:37:58.528763'
+    - D hat Strom
+    - D hat keinen Strom
+    - ''
+    - ''
+    - ''
+    - ! "         ___      ____\r\n    A --| & |____| ≥1 |\r\n    B --|___|    |    |==========
+      D\r\n                 |    |\r\n    C============|____|\r\n\r\nDas Oder Gatter
+      läßt immer Strom raus, wenn mindestens afu einem Eingang Strom anliegt."
