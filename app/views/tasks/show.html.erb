@@ -6,25 +6,30 @@
 </p>
 
 <p>
-  <b>Description:</b>
+  <b>Beschreibung:</b>
   <%= raw BlueCloth.new(@task.description).to_html %>
 </p>
 
 <p>
-  <b>Answer:</b>
+  <b>Antwort:</b>
   <%= @task.answer %>
 </p>
 
 <p>
-  <b>Points:</b>
+  <b>Punkte:</b>
   <%= @task.points %>
 </p>
 
 <p>
-  <b>Category:</b>
-  <%= @task.category_id %>
+  <b>Kategorie:</b>
+  <%= @task.category_id %>: <%= @task.category.name %>
+</p>
+
+<p>
+  <b>Lösung:</b>
+  <%= raw BlueCloth.new(@task.solution).to_html %>
 </p>
 
 
-<%= link_to 'Edit', edit_task_path(@task) %> |
-<%= link_to 'Back', tasks_path %>
+<%= link_to 'Editieren', edit_task_path(@task) %> |
+<%= link_to 'Zurück', tasks_path %>

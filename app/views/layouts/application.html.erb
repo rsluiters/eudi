@@ -10,11 +10,7 @@
 		<div class="navbar">
 		<div class="navbar-inner">
 		<div class="container">	
-		<a class="brand" href="#">
-	    Emmi und die Informatiker
-	    </a>
-	<%= link_to 'Kategorien', categories_path %> |
-
+		<%= link_to 'Emmi und die Informatiker', categories_path, :class => "brand" %>
 	<% if current_user and current_user.is_admin %>
 	<%= link_to 'Aufgaben', tasks_path %> |
     <% end %>

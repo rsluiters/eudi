@@ -1,14 +1,11 @@
-<h1>Liste von Kategorien</h1>
-
+	<h1>Kategorien</h1><br/>
+	<p>Wähle eine Aufgabenkategorie aus, in der dir die Fragen gestellt werden.</p>
 <table class="table table-striped">
-  <tr>
-    <th>Beschreibung</th>
-    <th></th>
-  </tr>
+
 
 <% @categories.each do |category| %>
   <tr>
-    <td><h3><%= category.name %></h3>
+    <td><h3><%= category.id %>: <%= category.name %></h3>
     <%= raw BlueCloth.new(category.description).to_html %></td>
     <td><%= link_to 'Fragen', "categories/#{category.id}/task", :class => "btn btn-success icon-circle-arrow-right icon-white"  %>
 	<% if current_user.is_admin %>

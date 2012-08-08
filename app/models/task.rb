@@ -6,6 +6,16 @@ class Task < ActiveRecord::Base
     return "-1"
   end
   
+  def optionshash
+    arr ={}
+    arr["1"] = self.option1 unless self.option1 == ""
+    arr["2"] = self.option2 unless self.option2 == ""
+    arr["3"] = self.option3 unless self.option3 == ""
+    arr["4"] = self.option4 unless self.option4 == ""
+    arr["5"] = self.option5 unless self.option5 == ""
+    return arr
+  end
+  
   def correct_answer
     case self.answer
       when "1" 
