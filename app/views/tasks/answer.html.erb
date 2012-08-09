@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 <% if params[:post][:answered] == @task.answer.to_s%>
 <h2>Die Antwort ist <b>R I C H T I G !</b></h2>
-<%= @task.correct_answer %><br/>
+<%= @task.correct_answer %><br/><br/><br/>
 <table class="table table-bordered">
 <tr><td>Punkte vorher: <span class="badge badge-success pull-right"><%= current_user.points - @task.points %></span></td></tr>
 <tr><td>Punkte der Aufgabe: <span class="badge pull-right">+<%= @task.points %></span></td></tr>
