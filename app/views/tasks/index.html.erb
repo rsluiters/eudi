@@ -5,7 +5,7 @@
     <th>Name</th>
     <th>Beschreibung</th>
     <th>Antwortvorgaben</th>
-    <th>Antwort</th>
+    <th>Lösung</th>
     <th>Punkte</th>
     <th>Kategorie</th>
     <th></th>
@@ -17,14 +17,12 @@
     <td><%= raw BlueCloth.new(task.description).to_html %></td>
     <td>
       <ol>
-      <li><%= task.option1 %></li>
-      <li><%= task.option2 %></li>
-      <li><%= task.option3 %></li>
-      <li><%= task.option4 %></li>
-      <li><%= task.option5 %></li>
+<% task.optionshash.each_key do |k| %>
+  <li><% if (k==task.answer) %><b><%= task.optionshash[k] %></b><%else%> <%=task.optionshash[k] %><%end%></li>
+<% end %>
       </ol>
 	</td>
-    <td><%= task.answer %></td>
+    <td><%= raw BlueCloth.new(task.solution).to_html %></td>
     <td><%= task.points %></td>
     <td><%= task.category.name %></td>
     <td><%= link_to '', task, :class => "btn icon-eye-open icon-white"  %><br/><br/>
