@@ -83,4 +83,25 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  
+
+  def certificate
+    @user = User.find(params[:id])
+    respond_to do |format|
+      format.pdf do
+        pdf = PDF::Writer.new
+        
+        pdf.text ["Urkunde"], :font_size => 72, :justification => :center
+        pdf.fill_color  Color::RGB::Blue
+        pdf.text ["#{@user.name}"], :font_size => 48, :justification => :center
+        pdf.text ["","#{@user.points} Punkte"], :font_size => 32, :justification => :center
+#        df.text [@user.name]
+        send_data pdf.render, :filename => 'urkunde.pdf', :type => 'application/pdf', :disposition => 'inline'
+      end
+    end
+  end
+
+
+  
 end

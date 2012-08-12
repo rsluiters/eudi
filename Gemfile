@@ -19,6 +19,7 @@ end
 gem 'jquery-rails'
 gem 'twitter-bootstrap-rails'
 gem 'yaml_db'
+gem 'pdf-writer'
 
 group :development, :test do
   gem 'sqlite3'

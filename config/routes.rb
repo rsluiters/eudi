@@ -7,6 +7,7 @@ Eudi::Application.routes.draw do
   match 'categories/:id/task' => 'categories#show_random_task'
 
   resources :users
+  match 'users/:id/certificate' => 'users#certificate'
   resource :session
 
   # Sample of regular route:
