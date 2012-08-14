@@ -7,33 +7,32 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<% if current_user %>
 		<div class="navbar">
 		<div class="navbar-inner">
 		<div class="container">	
 		<%= link_to 'Emmi und die Informatiker', categories_path, :class => "brand" %>
 		<ul class="nav">
-	<% if current_user and current_user.is_admin %>
+	<% if current_user.is_admin %>
 	<li><%= link_to 'Aufgaben', tasks_path %></li>
     <% end %>
-	<% if current_user and (current_user.is_teacher) %>
+	<% if (current_user.is_teacher) %>
 	<li><%= link_to 'Benutzer', users_path %></li>
     <% end %>
     </ul>
 
 
 	<div class ="pull-right">
-	<% if current_user %>
 	  <%= link_to ' ' + current_user.name,user_path(current_user), class: 'icon-user' %>
       <span class="badge badge-success"><%= current_user.points %></span>
 	<%= link_to " Abmelden" , session_path, :method => :delete, :class => "btn icon-eject"%>
+	</div>
+	</div>
+	</div>
+	</div>
 	<% end %>
-	</div>
-	</div>
-	</div>
-	</div>
 	<div class="row">
-	<div class="span1">&nbsp;</div>
-	<div class="span10">
+	<div class="span10 offset1">
 	<%= yield %>
 	</div></div></body>
 </html>

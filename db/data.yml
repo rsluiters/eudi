@@ -17,9 +17,9 @@ users:
     - Sluiters
     - ralph@sluiters.de
     - $2a$10$OnifFNO1/AnEGJ8KmMUFB.sq2UYESX7V90HOAXjFIBdZLa4Sl7rSy
-    - 320
+    - 470
     - '2012-07-27 19:21:20.954541'
-    - '2012-08-05 19:10:23.835888'
+    - '2012-08-08 20:35:10.756389'
     - 1
   - - 2
     - Jule
@@ -92,6 +92,11 @@ categories:
     - Textbehandlung
     - '2012-08-02 12:13:52.621382'
     - '2012-08-02 12:13:52.621382'
+  - - 6
+    - Internet
+    - Fragen rund um das hema _Internet_ und Seiten im Internet.
+    - '2012-08-09 17:47:53.953793'
+    - '2012-08-09 17:47:53.953793'
 
 ---
 tasks:
@@ -144,20 +149,6 @@ tasks:
       Tier dabei ist, es müssen aber auch nicht genau 5 Schafe sein, da nicht gesagt
       wird, dass alle weissen Tiere auch Schafe sind, es könnte also auch ein weisser
       Hund dazwischen sitzen.
-  - - 3
-    - sdfsdf
-    - sdfsdfs
-    - '1'
-    - 1
-    - 1
-    - '2012-08-03 19:32:20.184566'
-    - '2012-08-05 18:55:29.353285'
-    - correct
-    - wrong
-    - ''
-    - ''
-    - ''
-    - ''
   - - 4
     - Gatter I
     - ! "Folgende Schaltung ist gegeben:\r\n         ___      ____\r\n    A --| &
@@ -167,7 +158,7 @@ tasks:
     - 20
     - 2
     - '2012-08-04 19:52:13.579448'
-    - '2012-08-05 19:37:58.528763'
+    - '2012-08-14 20:18:14.238676'
     - D hat Strom
     - D hat keinen Strom
     - ''
@@ -175,4 +166,125 @@ tasks:
     - ''
     - ! "         ___      ____\r\n    A --| & |____| ≥1 |\r\n    B --|___|    |    |==========
       D\r\n                 |    |\r\n    C============|____|\r\n\r\nDas Oder Gatter
-      läßt immer Strom raus, wenn mindestens afu einem Eingang Strom anliegt."
+      läßt immer Strom raus, wenn mindestens auf einem Eingang Strom anliegt."
+  - - 5
+    - Gatter II
+    - ! "Folgende Schaltung ist gegeben:\r\n         ___      ____\r\n    A --| ≥1|____|
+      &  |\r\n    B --|___|    |    |---------- D\r\n                 |    |\r\n    C------------|____|\r\n\r\n\r\n*
+      C hat Strom\r\n* A und B haben keinen Strom\r\n"
+    - '1'
+    - 10
+    - 2
+    - '2012-08-08 18:55:20.677008'
+    - '2012-08-08 18:55:20.677008'
+    - D hat Strom
+    - D hat keinen Strom
+    - ''
+    - ''
+    - ''
+    - ! "Da A und B keinen Strom haben, liefer auch das Oder-Gatter keinen Strom.
+      Deshalb ist, egal ob C Strom hat im Und-Gatter kein Strom:\r\n         ___      ____\r\n
+      \   A --| ≥1|____| &  |\r\n    B --|___|    |    |---------- D\r\n                 |
+      \   |\r\n    C============|____|\r\n\r\n\r\n"
+  - - 6
+    - Zähle und
+    - ! "Wie oft kommt die Buchstabenfolge *und* in folgendem Text vor:\r\n\r\n*Tom
+      und Tim spielen eine Stunde mit dem runden Ball und schiessen beide hundert
+      mal aufs Tor.*\r\n"
+    - '5'
+    - 10
+    - 5
+    - '2012-08-08 19:07:45.345030'
+    - '2012-08-08 19:07:45.345030'
+    - Gar nicht
+    - einmal
+    - zweimal
+    - viermal
+    - fünfmal
+    - ! "*Tom __und__ Tim spielen eine St__und__e mit dem r__und__en Ball __und__
+      schiessen beide h__und__ert mal aufs Tor.*\r\n\r\nDas sind genau fünf mal __und__!\r\n"
+  - - 7
+    - Was passiert hier I
+    - ! "Fritz hat ein Computerprogramm geschrieben. Es fragt dich nach zwei Zahlen
+      Zahl1 und Zahl2. Diese müssen eingegeben werden, danach macht das Programm folgendes:\r\n\r\n
+      \   Setze Ergebnis auf Null\r\n    solange Zahl1 größer ist als Null\r\n      Erhöhe
+      Ergebnis um Zahl2\r\n      Erniedrige Zahl1 um eins\r\n    ende\r\n\r\nBei Eingabe
+      von 2 für _Zahl1_ und 2 für _Zahl2_ ist das _Ergebnis_ 4.\r\n\r\nWas ist das
+      Ergebnis für eine Eingabe von _Zahl1_ = 4 und _Zahl2_ = 5. "
+    - '4'
+    - 20
+    - 3
+    - '2012-08-08 19:26:58.100551'
+    - '2012-08-10 05:26:10.444389'
+    - '5'
+    - '4'
+    - '9'
+    - '20'
+    - '40'
+    - ! "Das Programm multipliziert die Zahlen. \r\n\r\n    Setze Ergebnis auf Null\r\n
+      \   solange Zahl1 größer ist als Null\r\n      Erhöhe Ergebnis um Zahl2\r\n
+      \     Erniedrige Zahl1 um eins\r\n    ende\r\n\r\nIn der Ausführung wird also
+      erst das Ergebnis auf null gesetzt und dann 4(=Zahl1) mal die 5(=Zahl2) auf
+      das Ergebnis additert, so dass das Resultat bei 20 liegt."
+  - - 8
+    - Seiten I
+    - ! "Eine der bekanntesten Internetseiten ist _youtube_, sie sorgt wür einen großteil
+      der im Internet versendeten Daten.\r\n\r\nWas ist das Hauptthema von _youtube_?"
+    - '2'
+    - 5
+    - 6
+    - '2012-08-10 05:18:07.570239'
+    - '2012-08-10 05:18:07.570239'
+    - E-Mail
+    - Videos
+    - Suchen
+    - Lexikon
+    - Software
+    - Die Platform _youtube_ dient zum teilen und anschauen von Videos.
+  - - 9
+    - Seiten II
+    - Seit Jahren gibt es das freie Lexikon **Wikipedia** im Internet. Was ist das
+      besondere an diesem Lexikon?
+    - '4'
+    - 10
+    - 6
+    - '2012-08-14 20:23:36.570113'
+    - '2012-08-14 20:23:36.570113'
+    - Es ist das erste Lexikon, welches sich mit dem Thema Internet befasst.
+    - Das Lexikon enthält keinen einzigen Fehler.
+    - Zu jedem Artikel gibts auch ein Video.
+    - Jeder kann an diesem Lexikon mitarbeiten.
+    - Das Lexikon wurde automatisch von Computern ohne Mitwirkung von Menschen erstellt.
+    - Das besondere ist, das jeder Mensch an diesem Lexikon mitschreiben kann. Die
+      Artikel können einfach editiert werden, und werden dann von einem Team von freiwilligen
+      Administratoren geprüft. Die Idee ist, dass durch die Mitwirkung von jedem Fehler
+      schnell gefunden und verbessert werden.
+  - - 10
+    - Wortsuche
+    - ! "Gegeben ist folgende Liste von Sätzen:\r\n\r\n* Wenn das Wörtchen \"wenn\"
+      nicht wär...\r\n* Wenn ich einmal groß bin...\r\n* Wen muss ich fragen, wenn
+      ichs nicht weiß?\r\n* An wen muss ich das schicken?\r\n* Muss ich hier wenden?\r\n\r\nIch
+      möchte alle Sätze mit dem Wort _wen_ (oder _Wen_) finden (Ohne Beachtung der
+      Groß-/Kleinschreibung). Wonach muss ich suchen?\r\n\r\nTipp: Es sollen 2 Sätze
+      gefunden werden."
+    - '3'
+    - 10
+    - 5
+    - '2012-08-14 20:40:20.779694'
+    - '2012-08-14 20:41:53.036308'
+    - Das Satz muss "wen" enthalten
+    - Der Satz muss "w", "e" und "n" enthalten, aber nicht zwei "n"
+    - Alle Sätze, die "wen" enthalten, es darf aber vor dem w kein Buchstabe und nach
+      dem n kein Buchstabe stehen
+    - Alle Sätze, die "wen" enthalten,  aber kein "wenn"
+    - Der Satz muss "Leerzeichen" - "wen" - "Leerzeichen" enthalten.
+    - ! "Es sollen natürlich die folgenden zwei Sätze gefunden werden:\r\n\r\n* Wen
+      muss ich fragen, wenn ichs nicht weiß?\r\n* An wen muss ich das schicken?\r\n\r\nDie
+      vier falschen Lösungen erkennen wir durch Ausschluß:\r\n\r\n* Das Satz muss
+      \"wen\" enthalten: Findet auch den Satz _**Wen**n das Wörtchen \"wenn\" nicht
+      wär..._\r\n* Der Satz muss \"w\", \"e\" und \"n\" enthalten, aber nicht zwei
+      \"n\": Findet nicht _An **wen** muss ich das schicke**n**?_\r\n* Alle Sätze,
+      die \"wen\" enthalten,  aber kein \"wenn\": Findet nicht _**Wen** muss ich fragen,
+      **wenn** ichs nicht weiß?_\r\n* Der Satz muss \"Leerzeichen\" - \"wen\" - \"Leerzeichen\"
+      enthalten: Findet nicht _Wen muss ich fragen..._ da am Anfang kein Leerzeichen
+      ist."

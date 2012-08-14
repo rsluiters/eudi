@@ -1,7 +1,9 @@
-<div class ="lead"> 
-	Hier geht es darum, möglichst viele Punkte zu sammeln aus den verschiedenen Bereichen der Informatik.
-</div>
-<h1>Einloggen</h1>
+<div class="hero-unit">
+	<h1>Emmi und die Informatiker</h1>
+	<h2>Geschrieben von Ralph Sluiters</h2>
+	Bei diesem Spiel es darum, Fragen zu den verschiedenen Bereichen der Informatik zu beantworten und damit möglichst viele Punkte zu sammeln.
+		<img src="/emmi_title.jpg" class="pull-right" /><br/><br/><br/><br/><br/><br/>
+<h3>Einloggen</h3>
 <%= form_for :user, :url => session_path, :method => :post do |f| %>
   <%= f.label :email %>
   <%= f.text_field :email %>
@@ -11,4 +13,6 @@
 <br/>
   <%= f.submit "Anmelden" , :class => "btn btn-primary"%>
 <% end %>
+<br/><br/>
+</div>
 <%= render 'highscore' %>
