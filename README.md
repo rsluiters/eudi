@@ -20,8 +20,6 @@
 - show statistics about answers per section to user
 - add possibility so that user can send each other notices
 - add categories with general questions and questions about the internet
-- add some category pictures which get always shown when showing questions for this category
-- add emmi picture to the startpage
 - add explanation page for the general application
 - change profile picture (Emmi with some graphic filter applied)
 - add impressum to page bottom
@@ -35,3 +33,5 @@
 
 
 - task ask: replace options by 5 different buttons
+- Teacher handling (Teach can create up to 100 pupils, ...)
+- add some more category pictured and copyright
