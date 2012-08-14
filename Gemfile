@@ -19,7 +19,7 @@ end
 gem 'jquery-rails'
 gem 'twitter-bootstrap-rails'
 gem 'yaml_db'
-gem 'pdf-writer'
+#gem 'pdf-writer' #use wickedpdf
 
 group :development, :test do
   gem 'sqlite3'
