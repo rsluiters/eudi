@@ -31,20 +31,20 @@ describe UsersController do
   # User. As you add validations to User, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    {}
+    {:first_name => "Test", :last_name => "Test", :email => "testnew@test.com", :password=>"test"}
   end
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
   # UsersController. Be sure to keep this updated too.
   def valid_session
-    {}
+    {:user_id => @user.id}
   end
 
   describe "GET index" do
     it "assigns all users as @users" do
       get :index, {}, valid_session
-      assigns(:users).should eq([user])
+      assigns(:users).should eq([@user])
     end
   end
 

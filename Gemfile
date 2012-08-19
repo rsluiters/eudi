@@ -21,11 +21,13 @@ gem 'twitter-bootstrap-rails'
 gem 'yaml_db'
 #gem 'pdf-writer' #use wickedpdf
 
+
+
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
-  gem 'simplecov'
+  gem 'simplecov', :require => false, :group => :test
 end
 group :production do
     gem "pg"

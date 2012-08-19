@@ -15,14 +15,14 @@ private
   end
 
   def only_admin
-    unless current_user and current_user.role == User::ROLE_ADMIN
+    unless current_user and current_user.is_admin
       render '403.html' 
 #      render :status => :forbidden
     end  
   end
 
   def only_teacher
-    unless current_user and (current_user.role == User::ROLE_ADMIN or current_user.role == User::ROLE_TEACHER)
+    unless current_user and (current_user.is_teacher)
       render :file => "#{Rails.root}/public/403.html", :status => 403, :layout => false
 #      render :status => :forbidden
     end  

@@ -20,18 +20,29 @@ require 'spec_helper'
 
 describe TasksController do
 
+  before(:each) do
+    @u = User.new()
+    @u.email="test@test.de"
+    @u.first_name="test"
+    @u.last_name="test"
+    @u.password="test"
+    @u.role = User::ROLE_ADMIN
+    @u.save!
+  end
+  
+
   # This should return the minimal set of attributes required to create a valid
   # Task. As you add validations to Task, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    {}
+    {:name => "testtask"}
   end
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
   # TasksController. Be sure to keep this updated too.
   def valid_session
-    {}
+    {:user_id => @u.id}
   end
 
   describe "GET index" do

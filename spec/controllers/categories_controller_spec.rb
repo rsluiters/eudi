@@ -20,6 +20,17 @@ require 'spec_helper'
 
 describe CategoriesController do
 
+
+  before(:each) do
+    @u = User.new()
+    @u.email="test@test.de"
+    @u.first_name="test"
+    @u.last_name="test"
+    @u.password="test"
+    @u.role = User::ROLE_ADMIN
+    @u.save!
+  end
+
   # This should return the minimal set of attributes required to create a valid
   # Category. As you add validations to Category, be sure to
   # update the return value of this method accordingly.
@@ -31,7 +42,7 @@ describe CategoriesController do
   # in order to pass any filters (e.g. authentication) defined in
   # CategoriesController. Be sure to keep this updated too.
   def valid_session
-    {}
+    {:user_id => @u.id}
   end
 
   describe "GET index" do

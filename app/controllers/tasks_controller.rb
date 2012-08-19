@@ -35,7 +35,7 @@ class TasksController < ApplicationController
   def answer
     @task = Task.find(params[:id])
 #    render :text => "#{@task.answer}, #{params.inspect}" and return
-    if (@task.answer.to_s == params[:post][:answered])
+    if (params[:post] && @task.answer.to_s == params[:post][:answered])
       current_user.points += @task.points
       current_user.save!
     else
