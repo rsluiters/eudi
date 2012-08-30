@@ -6,9 +6,8 @@
     <th>Name</th>
     <th>Email</th>
     <th>Rolle</th>
+    <th>Lehrer</th>
     <th>Punkte</th>
-    <th></th>
-    <th></th>
     <th></th>
   </tr>
 
@@ -18,10 +17,11 @@
     <td><%= user.name %></td>
     <td><%= user.email %></td>
     <td><span class="label label-info"><%= user.role_name %></span></td>
+    <td><%= user.teacher ? user.teacher.name : "---" %></td>
     <td><span class="badge badge-success"><%= user.points %></span></td>
-    <td><%= link_to 'Anzeigen', user, :class => "btn icon-eye-open icon-white" %></td>
-    <td><%= link_to 'Bearbeiten', edit_user_path(user), :class => "btn icon-pencil icon-white" %></td>
-    <td><%= link_to 'Löschen', user, method: :delete, data: { confirm: 'Bist du sicher?' }, :class => "btn btn-danger icon-white icon-trash" %></td>
+    <td><%= link_to 'Anzeigen', user, :class => "btn icon-eye-open icon-white" %>
+    <%= link_to 'Bearbeiten', edit_user_path(user), :class => "btn icon-pencil icon-white" %>
+    <%= link_to 'Löschen', user, method: :delete, data: { confirm: 'Bist du sicher?' }, :class => "btn btn-danger icon-white icon-trash" %></td>
   </tr>
 <% end if @users %>
 </table>

@@ -12,24 +12,28 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :first_name %><br />
+    <%= f.label :first_name,"Vorname" %><br />
     <%= f.text_field :first_name %>
   </div>
   <div class="field">
-    <%= f.label :last_name %><br />
+    <%= f.label :last_name,"Nachname" %><br />
     <%= f.text_field :last_name %>
   </div>
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email, "E-Mail" %><br />
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :password %><br />
+    <%= f.label :password, "Passwort" %><br />
     <%= f.text_field :password %>
   </div>
   <div class="field">
-    <%= f.label :points %><br />
+    <%= f.label :points, "Punkte" %><br />
     <%= f.number_field :points %>
+  </div>
+  <div class="field">
+    <%= f.label :teacher_id, "Lehrer ID" %><br />
+    <%= f.number_field :teacher_id %>
   </div>
   <div class="actions">
     <%= f.submit %>

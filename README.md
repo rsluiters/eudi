@@ -5,7 +5,7 @@
 - show task
 - print certificates ( rails cast 78)
 - startpage
-- link to gravatar to edit pictures
+
 - complete beforefilter / only allow pupils to access the areas they should
 - make sure that email caseinsensitive is unique
 - get test cases running
@@ -15,7 +15,7 @@
 - add explanation to categories
 - avoid error if no answer is given
 
-- add time spend to task answering
+- add time spent to task answering
 - store answers (and time needed to answer)
 - show statistics about answers per section to user
 - add possibility so that user can send each other notices
@@ -24,12 +24,12 @@
 - change profile picture (Emmi with some graphic filter applied)
 - add impressum to page bottom
 - giver user different stages (Byte, Kilo, Mega, ... he can reach depending on points)
-- store age of user
+- store birthday and show age of user
 - store target age for categories
 
-- link user to teacher
+
 - allow teacher to change points for user
-- add class view for teacher
+
 
 
 - task ask: replace options by 5 different buttons

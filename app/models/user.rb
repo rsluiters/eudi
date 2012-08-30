@@ -4,11 +4,14 @@ class User < ActiveRecord::Base
   ROLE_ADMIN=1
   ROLE_TEACHER=2
   
-  attr_accessible :email, :first_name, :last_name, :points, :password
+  attr_accessible :email, :first_name, :last_name, :points, :password, :teacher_id
   
   validates_presence_of :first_name, :last_name, :email
   validates_uniqueness_of :email
   validates :role, :inclusion    => { :in => [ROLE_USER, ROLE_ADMIN,ROLE_TEACHER]}
+
+  belongs_to :user
+  has_many :user,  :class_name => User, :foreign_key => :teacher_id
 
   after_initialize :default_values
   
@@ -27,6 +30,17 @@ class User < ActiveRecord::Base
     
   end
 
+  # Get teacher of user
+  def teacher
+    return nil unless self.teacher_id
+    return User.find_by_id(self.teacher_id)
+  end
+
+  # All pupils of a teacher
+  def pupils
+    return [] unless self.is_teacher
+    return User.where("teacher_id = ? ",self.id)
+  end
 
   def role_name
     return {ROLE_USER=>"Schüler",ROLE_TEACHER=>"Lehrer",ROLE_ADMIN=>"Admin"}[self.role]
