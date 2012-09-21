@@ -1,5 +1,7 @@
 class Task < ActiveRecord::Base
-  attr_accessible :answer, :category_id, :description, :name, :points, :option1, :option2, :option3, :option4, :option5, :solution
+  attr_accessible :answer, :category_id, :description, :name, :points
+  attr_accessible :option1
+  attr_accessible :option2, :option3, :option4, :option5, :solution
   
   belongs_to :category
   def answered 
