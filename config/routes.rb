@@ -1,14 +1,6 @@
 Eudi::Application.routes.draw do
-  resources :tasks
-  match 'tasks/:id/ask' => 'tasks#ask'
-  match 'tasks/:id/answer' => 'tasks#answer'
-
-  resources :categories
-  match 'categories/:id/task' => 'categories#show_random_task'
-
-  resources :users
-  match 'users/:id/certificate' => 'users#certificate'
-  resource :session
+  # The priority is based upon order of creation:
+  # first created -> highest priority.
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
@@ -54,7 +46,9 @@ Eudi::Application.routes.draw do
   #     resources :products
   #   end
 
-  root :to => 'categories#index'
+  # You can have the root of your site routed with "root"
+  # just remember to delete public/index.html.
+  # root :to => 'welcome#index'
 
   # See how all your routes lay out with "rake routes"
 
