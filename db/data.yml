@@ -11,25 +11,28 @@ users:
   - created_at
   - updated_at
   - role
+  - teacher_id
   records: 
   - - 1
     - Ralph
     - Sluiters
     - ralph@sluiters.de
     - $2a$10$OnifFNO1/AnEGJ8KmMUFB.sq2UYESX7V90HOAXjFIBdZLa4Sl7rSy
-    - 470
+    - 0
     - '2012-07-27 19:21:20.954541'
-    - '2012-08-08 20:35:10.756389'
+    - '2012-12-24 12:47:48.298834'
     - 1
+    - 
   - - 2
     - Jule
     - Sluiters
     - jule@sluiters.de
     - $2a$10$CsJCm2vAB9p0MtNSUynvy.WWJeYSjTenZKGg8oKD6YxyfO7fauyzO
-    - 441
-    - '2012-07-27 19:26:04.372136'
-    - '2012-08-04 07:43:25.553347'
     - 0
+    - '2012-07-27 19:26:04.372136'
+    - '2012-12-24 12:47:18.992144'
+    - 0
+    - 
   - - 3
     - Melanie
     - Wagner
@@ -39,15 +42,17 @@ users:
     - '2012-07-27 19:49:45.671022'
     - '2012-07-27 19:49:45.671022'
     - 2
+    - 
   - - 5
     - Hannah
     - Sluiters
     - hannah@sluiters.de
     - $2a$10$y809BqVcPOst3lOJlJc6.emE8C85J2/5Kojy1mqA.exOsvufBEJYi
-    - 62
+    - 2
     - '2012-08-02 12:09:53.688899'
-    - '2012-08-04 07:45:13.974257'
+    - '2012-12-24 12:47:29.221920'
     - 0
+    - 
   - - 6
     - Emil
     - Sluiters
@@ -57,6 +62,7 @@ users:
     - '2012-08-03 07:50:20.044289'
     - '2012-08-03 07:50:20.044289'
     - 0
+    - 
 
 ---
 categories:
@@ -97,6 +103,11 @@ categories:
     - Fragen rund um das hema _Internet_ und Seiten im Internet.
     - '2012-08-09 17:47:53.953793'
     - '2012-08-09 17:47:53.953793'
+  - - 7
+    - Mathe 2. Schuljahr
+    - Matheaufgaben des 2. Schuljahrs, z.B. zu Uhr, Datum, Wochentagen usw.
+    - '2013-01-30 13:35:05.327733'
+    - '2013-01-30 13:35:05.327733'
 
 ---
 tasks:
@@ -288,3 +299,157 @@ tasks:
       **wenn** ichs nicht weiß?_\r\n* Der Satz muss \"Leerzeichen\" - \"wen\" - \"Leerzeichen\"
       enthalten: Findet nicht _Wen muss ich fragen..._ da am Anfang kein Leerzeichen
       ist."
+  - - 11
+    - Wochentage 2
+    - ! "Welcher ist der nächste Wochentag:\r\n\r\n* Mittwoch\r\n* Donnerstag\r\n*
+      ?"
+    - '1'
+    - 1
+    - 7
+    - '2013-01-30 13:37:16.690202'
+    - '2013-01-30 13:37:16.690202'
+    - Freitag
+    - Montag
+    - Samstag
+    - '7'
+    - Januar
+    - Montag, Dienstag, Mittwoch, Donnerstag, Freitag, Samstag, Sonntag
+  - - 12
+    - Wochentage 3
+    - ! "Welcher Wochentag kommt davor:\r\n\r\n* ?\r\n* Montag\r\n* Dienstag"
+    - '3'
+    - 1
+    - 7
+    - '2013-01-30 13:38:45.036064'
+    - '2013-01-30 13:38:45.036064'
+    - Mittwoch
+    - Samstag
+    - Sonntag
+    - März
+    - '5'
+    - Sonntag, Montag, Dienstag
+  - - 15
+    - Monate 1
+    - Wie viele Tage hat der August?
+    - '4'
+    - 1
+    - 7
+    - '2013-01-30 13:46:37.101097'
+    - '2013-01-30 13:46:37.101097'
+    - '28'
+    - '29'
+    - '30'
+    - '31'
+    - '8'
+    - ! "* Januar (1. Monat), 31 Tage\r\n* Februar (2. Monat), 28 Tage\r\n* März (3.
+      Monat), 31 Tage\r\n* April (4. Monat), 30 Tage\r\n* Mai (5. Monat), 31 Tage\r\n*
+      Juni (6. Monat), 30 Tage\r\n* Juli (7. Monat), 31 Tage\r\n* August (8. Monat),
+      31 Tage\r\n* September (9. Monat), 30 Tage\r\n* Oktober (10. Monat), 31 Tage\r\n*
+      November (11. Monat), 30 Tage\r\n* Dezember (12. Monat), 31 Tage"
+  - - 16
+    - Monate 2
+    - Wie viele Tage hat der Februar?
+    - '5'
+    - 2
+    - 7
+    - '2013-01-30 13:49:03.955511'
+    - '2013-01-30 13:49:03.955511'
+    - '2'
+    - '29'
+    - '30'
+    - '31'
+    - 28 oder 29
+    - Der Februar hat 28 Tage, in Schaltjahren (alle 4 Jahre) hat er 29 Tage.
+  - - 17
+    - Monate 3
+    - Wie viele Tage hat der November?
+    - '3'
+    - 1
+    - 7
+    - '2013-01-30 13:50:15.226535'
+    - '2013-01-30 13:50:15.226535'
+    - '28'
+    - '29'
+    - '30'
+    - '31'
+    - '11'
+    - ! "* Januar (1. Monat), 31 Tage\r\n* Februar (2. Monat), 28 Tage\r\n* März (3.
+      Monat), 31 Tage\r\n* April (4. Monat), 30 Tage\r\n* Mai (5. Monat), 31 Tage\r\n*
+      Juni (6. Monat), 30 Tage\r\n* Juli (7. Monat), 31 Tage\r\n* August (8. Monat),
+      31 Tage\r\n* September (9. Monat), 30 Tage\r\n* Oktober (10. Monat), 31 Tage\r\n*
+      November (11. Monat), 30 Tage\r\n* Dezember (12. Monat), 31 Tage"
+  - - 18
+    - Monate 4
+    - Der wie vielte Monat ist der März?
+    - '1'
+    - 1
+    - 7
+    - '2013-01-30 13:51:06.104739'
+    - '2013-01-30 13:51:06.104739'
+    - '3'
+    - '4'
+    - '31'
+    - '30'
+    - Donnerstag
+    - ! "* Januar (1. Monat), 31 Tage\r\n* Februar (2. Monat), 28 Tage\r\n* März (3.
+      Monat), 31 Tage\r\n* April (4. Monat), 30 Tage\r\n* Mai (5. Monat), 31 Tage\r\n*
+      Juni (6. Monat), 30 Tage\r\n* Juli (7. Monat), 31 Tage\r\n* August (8. Monat),
+      31 Tage\r\n* September (9. Monat), 30 Tage\r\n* Oktober (10. Monat), 31 Tage\r\n*
+      November (11. Monat), 30 Tage\r\n* Dezember (12. Monat), 31 Tage"
+  - - 19
+    - Monate 5
+    - Welcher Monat kommt nach dem April?
+    - '3'
+    - 1
+    - 7
+    - '2013-01-30 13:51:47.608352'
+    - '2013-01-30 13:51:47.608352'
+    - 4.
+    - 5.
+    - Mai
+    - März
+    - August
+    - ! "* Januar (1. Monat), 31 Tage\r\n* Februar (2. Monat), 28 Tage\r\n* März (3.
+      Monat), 31 Tage\r\n* April (4. Monat), 30 Tage\r\n* Mai (5. Monat), 31 Tage\r\n*
+      Juni (6. Monat), 30 Tage\r\n* Juli (7. Monat), 31 Tage\r\n* August (8. Monat),
+      31 Tage\r\n* September (9. Monat), 30 Tage\r\n* Oktober (10. Monat), 31 Tage\r\n*
+      November (11. Monat), 30 Tage\r\n* Dezember (12. Monat), 31 Tage"
+  - - 20
+    - Monate 6
+    - Welcher Monat kommt vor dem Januar?
+    - '4'
+    - 1
+    - 7
+    - '2013-01-30 13:52:54.683015'
+    - '2013-01-30 13:52:54.683015'
+    - 1.
+    - '31'
+    - Dienstag
+    - Dezember
+    - Februar
+    - ! "* Januar (1. Monat), 31 Tage\r\n* Februar (2. Monat), 28 Tage\r\n* März (3.
+      Monat), 31 Tage\r\n* April (4. Monat), 30 Tage\r\n* Mai (5. Monat), 31 Tage\r\n*
+      Juni (6. Monat), 30 Tage\r\n* Juli (7. Monat), 31 Tage\r\n* August (8. Monat),
+      31 Tage\r\n* September (9. Monat), 30 Tage\r\n* Oktober (10. Monat), 31 Tage\r\n*
+      November (11. Monat), 30 Tage\r\n* Dezember (12. Monat), 31 Tage\r\nUnd nach
+      Dezember fängt das neue Jahr wieder mit Januar an."
+  - - 21
+    - Monate 7
+    - Wie kann man den 11.2. auch schreiben?
+    - '3'
+    - 1
+    - 7
+    - '2013-01-30 13:54:42.003718'
+    - '2013-01-30 13:54:42.003718'
+    - 2.11.
+    - 2. November
+    - 11. Februar
+    - Dienstag
+    - 12.2.
+    - ! "* Januar (1. Monat), 31 Tage\r\n* Februar (2. Monat), 28 Tage\r\n* März (3.
+      Monat), 31 Tage\r\n* April (4. Monat), 30 Tage\r\n* Mai (5. Monat), 31 Tage\r\n*
+      Juni (6. Monat), 30 Tage\r\n* Juli (7. Monat), 31 Tage\r\n* August (8. Monat),
+      31 Tage\r\n* September (9. Monat), 30 Tage\r\n* Oktober (10. Monat), 31 Tage\r\n*
+      November (11. Monat), 30 Tage\r\n* Dezember (12. Monat), 31 Tage\r\n\r\nDamit
+      ist der 11.2. der 11. Tage des 2. Monats, also der 11. Tag des Monats Februar,
+      also der 11. Februar"
